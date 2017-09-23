@@ -1,0 +1,14 @@
+version: "2"
+services:
+
+  node:
+    tty: true
+    build: node/
+    ports:
+      - "3000:80"
+
+
+  chrome:
+    build: chrome/
+    links:
+      - "node"
