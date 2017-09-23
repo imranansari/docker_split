@@ -1,14 +1,18 @@
 version: "2"
-services:
+networks:
+  private:
+    driver: bridge
 
+services:
   node:
     tty: true
     build: node/
     ports:
       - "3000:80"
-
+    networks:
+      - private
 
   chrome:
     build: chrome/
-    links:
-      - "node"
+    networks:
+      - private

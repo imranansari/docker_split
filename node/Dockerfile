@@ -19,7 +19,3 @@ RUN rm -rf /var/lib/apt/lists/* \
     /usr/lib/node_modules/npm/doc \
     /usr/lib/node_modules/npm/html \
     /usr/lib/node_modules/npm/scripts
-
-EXPOSE 3000
-
-CMD npm start
